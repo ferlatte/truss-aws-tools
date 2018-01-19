@@ -40,7 +40,7 @@ func main() {
 
 // makeS3Client makes an S3 client
 func makeS3Client(region, profile string) *s3.S3 {
-	sess := session.MustMakeSession(region, "")
+	sess := session.MustMakeSession(region, profile)
 	c := s3.New(sess)
 	return c
 }
